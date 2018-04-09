@@ -1,8 +1,9 @@
 accent-color = dodgerblue
+big-break = 60em
 dark-color = black
 gutter = 1em
+gutter-big = 3em
 light-color = white
-big-break = 60em
 
 body
   background-color light-color
@@ -28,7 +29,7 @@ p
   margin gutter
 
 .block--main
-  margin-top 3em
+  margin-top gutter-big
 
 .h
   margin 0
@@ -42,15 +43,14 @@ p
 
 @media all and (min-width: big-break)
   .resume
-    max-width 50em
     display grid
     grid-template-columns 38% 62%
+    margin-bottom gutter-big
+    margin-top gutter-big
+    max-width 50em
 
   header
     text-align right
-
-  nav
-    display none
 
   .block--main
     margin-top gutter
