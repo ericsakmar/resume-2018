@@ -1,28 +1,27 @@
-bg-color = ghostwhite
-fg-color = #343434
-gutter = 0.5em
-
-dark()
-  background-color fg-color
-  color bg-color
+dark-color = black
+gutter = 1em
+light-color = white
 
 body
-  background-color bg-color
-  color fg-color
-  font-family 'Open-Sans', sans-serif
+  background-color light-color
+  color dark-color
+  font-family 'Lato', sans-serif
 
-.header
+.block
+  margin gutter
+
+.block--main
+  margin-top 3em
+
+.h
   margin 0
-  font-family 'Arvo', serif
+  font-weight 900
+  text-transform uppercase
 
-header
-  dark()
-  padding-top gutter
-  padding-right gutter
-  padding-left gutter
+.details
+  font-weight 300
+  font-style italic
+  margin-top -1em
 
-.contact
-  dark()
-  padding-right gutter
-  padding-bottom gutter
-  padding-left gutter
+p
+  margin-top 0

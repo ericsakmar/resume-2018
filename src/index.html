@@ -5,48 +5,105 @@
   <title>Eric Sakmar</title>
   <meta name="description" content="Eric Sakmar Professional Resume">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@0.4.0/modern-normalize.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Arvo|Open+Sans" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css?family=Lato:300i,400,900" rel="stylesheet"> 
   <link rel="stylesheet" href="style.css" inline>
 </head>
 
 <body>
 
   <main class="resume">
-    <header>
-      <h1 class="header">Eric Sakmar</h1>
+    <header class="block header">
+      <h1 class="h">Eric Sakmar</h1>
+      <h2 class="h">Software Engineer</h2>
     </header>
 
-    <section class="contact">
-      <h2 class="header">Software Engineer</h2>
+    <section class="block contact">
       <div class="contact-info">eric@ericsakmar.com</div>
       <div class="contact-info">8149340702</div>
       <div class="contact-info">github link</div>
     </section>
 
-    <section class="experience">
-      <h2 class="header">Professional Experience</h2>
-      <p>Concurrent Technologies Corporation</p>
-      <p>May 2006 to Present</p>
+    <nav class="block">
+      <a href="#">Professional Experience</a>
+      <a href="#">Education</a>
+      <a href="#">Certificates and Certifications</a>
+      <a href="#">Other Projects</a>
+    </nav>
 
-      <h3 class="header">Promotions</h3>
-      <ul>
-        <li>Associate</li>
-        <li>Staff</li>
-        <li>Senior</li>
-      </ul>
+    <section class="block block--main experience">
+      <h2 class="h">Professional Experience</h2>
+
+      <p>Concurrent Technologies Corporation</p>
+      <p class="details">May 2006 to Present</p>
+
+      <h3 class="h">Promotions</h3>
+      <p>Associate Software Engineer</p>
+      <p class="details">May 2008</p>
+
+      <p>Staff Software Engineer</p>
+      <p class="details">May 2010</p>
+
+      <p>Senior Software Engineer</p>
+      <p class="details">June 2016</p>
     </section>
 
-    <article class="experience-details">
+    <section class="block experience-details">
       <article>
-        <h3>Front End</h3>
+        <h3 class="h">Front End Development</h3>
         <p>
           Created web front ends that manage big-data systems by allowing
           analysts to set up data sources and connecting them to processing
           sequences, feed data into a decision-making system &amp; visualize
           the results.
         </p>
+        <p class="details">
+          HTML, CSS, JavaScript, CoffeeScript, Stylus/LESS/SASS, AngularJS, Data
+          Visualiza4on, D3; Automated tes4ng with Protractor, Karma, Jasmine; Build tools
+          with Grunt, Gulp, Yeoman
+        </p>
+      </article>
+
+      <article>
+        <h3 class="h">Mobile Development</h3>
+        <p>
+          Created apps for phones and tablets that search for personnel skills and
+          display them geographically; track a user's sleep habits and offer advice on
+          how that affects his/her performance; complete and file reports; calculate
+          safety requirements of electrical systems; capture and store photographs
+          in a secured environment; recognize objects using computer vision.
+        </p>
+        <p class="details">
+          Android (Java/XML), iOS (Objec4ve-C), Web (Responsiveness, Offline Support),
+          OpenCV
+        </p>
+      </article>
+
+      <article>
+        <h3 class="h">Back End Development</h3>
+        <p>
+          Created back ends that provide secure REST services; perform federated
+          searches across disparate data sources; interface with third party systems.
+        </p>
+        <p class="details">
+          Java, Scala, Ruby, XML, JSON, Node.js, Guice, HK2, Jersey, AKKA, OAuth 2.0,
+          Vagrant; Automated tes4ng with JUnit, JerseyTest, ScalaTest, RSpec, Test::Unit;
+          Build tools with Maven, Gradle
+        </p>
       </article>
     </section>
+
+    <section class="block block--main education">
+      <h2 class="h">Education</h2>
+      <p>University of Pittsburgh, Johnstown Pennsylvania</p>
+      <p class="details">August 2002 - May 2006</p>
+    </section>
+
+    <section class="block education-details">
+      <h3 class="h">Bachelor of Science</h3>
+      <p>Computer Science</p>
+      <p class="details">Presidential Scholar, Magna Cum Laude</p>
+    </section>
+
   </main>
 
   <!-- <script src="script.js"></script> -->
