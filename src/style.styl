@@ -51,7 +51,18 @@ p
 .experience-list
   margin-top -1em
 
-@media all and (min-width: 60em)
+@media all and (min-width: 30em)
+  .projects-details
+    display grid
+    grid-template-columns 50% 50%
+
+    article:nth-child(even)
+      margin-left 0.5em
+
+    article:nth-child(odd)
+      margin-right 0.5em
+
+@media all and (min-width: 50em)
   .resume
     display grid
     grid-template-columns 38% 62%
