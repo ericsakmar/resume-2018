@@ -70,6 +70,8 @@ p
 
 @media all and (min-width: 30em)
   .projects-details
+    display -ms-grid
+    -ms-grid-columns 50% 50%
     display grid
     grid-template-columns 50% 50%
 
@@ -80,11 +82,15 @@ p
       margin-right 0.5em
 
   .contact-info
+    display -ms-grid
+    -ms-grid-columns 50% 50%
     display grid
     grid-template-columns 50% 50%
 
 @media all and (min-width: 50em)
   .resume
+    display -ms-grid
+    -ms-grid-columns 38% 62%
     display grid
     grid-template-columns 38% 62%
     margin-bottom gutter-big
