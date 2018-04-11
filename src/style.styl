@@ -14,11 +14,12 @@ a
   text-decoration-skip ink
   color accent-color
 
+header
+  background-color dark-color
+  color light-color
+
 article
   margin-bottom 1em
-
-img
-  max-width 100%
 
 .resume
   max-width 30em
@@ -32,13 +33,17 @@ img
     margin-bottom 0.25em
 
 .block
-  margin gutter
+  padding gutter
+  border 0.2em solid dark-color
 
 .block--main
   margin-top gutter-big
+  background-color dark-color
+  color light-color
 
   .details
     margin-top 0
+    opacity 0.75
 
 .h
   font-weight 900
@@ -66,7 +71,10 @@ p
   word-wrap break-word
 
 .badge
-  margin-top gutter
+  float right
+  width 150px
+  margin-left 0.5em
+  margin-bottom 0.5em
 
 @media all and (min-width: 30em)
   .projects-details
@@ -94,12 +102,12 @@ p
   header
     text-align right
 
-  .block--main
-    margin-top gutter
-    text-align right
+  .block
+    margin-bottom 1em
 
-  .page-link
-    display none
+  .block--main
+    margin-top 0
+    text-align right
 
 @media print
   .resume
@@ -108,9 +116,6 @@ p
 
   body
     font-size 12px
-
-  img
-    width 75%
 
   a
     text-decoration none
