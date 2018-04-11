@@ -14,14 +14,18 @@ gulp.task('style', () =>
   gulp
     .src('./src/style.styl')
     .pipe(stylus())
-    .pipe(gulp.dest('./dist'))
+    .pipe(gulp.dest('./dist')),
+);
+
+gulp.task('assets', () =>
+  gulp.src('./assets/*').pipe(gulp.dest('./dist/assets')),
 );
 
 gulp.task('inline', ['copy'], () =>
   gulp
     .src('./dist/index.html')
     .pipe(inline())
-    .pipe(gulp.dest('./dist'))
+    .pipe(gulp.dest('./dist')),
 );
 
 gulp.task('serve', ['inline'], () =>
@@ -29,8 +33,8 @@ gulp.task('serve', ['inline'], () =>
     webserver({
       port: 3000,
       livereload: true,
-    })
-  )
+    }),
+  ),
 );
 
 gulp.task('watch', ['serve'], () => gulp.watch('./src/*', ['inline']));
