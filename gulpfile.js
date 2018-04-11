@@ -6,7 +6,7 @@ const webserver = require('gulp-webserver');
 
 gulp.task('default', ['watch']);
 
-gulp.task('copy', ['html', 'style']);
+gulp.task('copy', ['html', 'style', 'assets']);
 
 gulp.task('html', () => gulp.src('./src/*.html').pipe(gulp.dest('./dist')));
 

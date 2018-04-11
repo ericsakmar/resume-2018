@@ -25,19 +25,12 @@ a
   text-decoration-skip ink
   color accent-color
 
-article
-  margin-bottom 1em
-
 .resume
   max-width 30em
   margin 0 auto
 
-.nav
-  list-style none
-  padding-left 0
-
-  li
-    margin-bottom 0.25em
+article:not(:last-child)
+  margin-bottom gutter
 
 .block
   padding gutter-small
@@ -89,6 +82,9 @@ p
   margin-left 0.5em
   margin-bottom 0.5em
 
+.nudge
+  margin-top 1em
+
 @media all and (min-width: 30em)
   .projects-details
     display grid
@@ -113,7 +109,7 @@ p
 
   .resume
     display grid
-    grid-template-columns 38% 62%
+    grid-template-columns 33.3333% 66.6666%
     max-width 50em
 
   .block
