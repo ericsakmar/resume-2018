@@ -28,6 +28,9 @@ img
   list-style none
   padding-left 0
 
+  li
+    margin-bottom 0.25em
+
 .block
   margin gutter
 
@@ -50,8 +53,9 @@ p
 .contact-info
   margin-top gutter
 
-  a
-    margin-right 0.5em
+.contact-link
+  display block
+  margin-bottom 0.25em
 
 .details
   font-weight 300
@@ -75,6 +79,10 @@ p
     article:nth-child(odd)
       margin-right 0.5em
 
+  .contact-info
+    display grid
+    grid-template-columns 50% 50%
+
 @media all and (min-width: 50em)
   .resume
     display grid
@@ -94,6 +102,10 @@ p
     display none
 
 @media print
+  .resume
+    margin-top 0
+    margin-bottom 0
+
   body
     font-size 12px
 
