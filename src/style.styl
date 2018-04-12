@@ -130,8 +130,9 @@ p
       grid-template-columns 33.3333% 66.6666%
 
 @media print
+  // printers seem to prefer floats over flexbox or grid
   body
-    font-size 12px
+    font-size 13px
     margin 0
     background-color #fff
 
@@ -141,20 +142,29 @@ p
   .print-only
     display block
 
+  .screen-only
+    display none
+
   .resume
-    display flex
-    flex-wrap wrap
+    display block
     max-width 100%
-    margin 0
+    padding 2em 1em
 
   .block
-    flex-basis 66.6666%
+    display block
+    float left
+    width 66.6666%
     margin-bottom 1em
+    background-color light-color
+    color dark-color
+    border 0
+    clear right
 
   .block--main
-    flex-basis 33.3333%
+    width 33.3333%
     margin-top 0
     text-align right
+    clear left
 
   .contact-info
     display flex
@@ -162,3 +172,4 @@ p
 
   .contact-link
     flex-basis 50%
+    color dark-color
