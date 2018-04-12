@@ -5,6 +5,7 @@ gutter-big = 3em
 gutter-small = 0.5em
 light-color = white
 bg-color = black
+big-break = 50em
 
 html
   box-sizing border-box
@@ -65,10 +66,9 @@ p
   margin-bottom 0.25em
 
 .contact-icon
-  width 1em
-  margin-right 0.25em
+  height 1em
   position relative
-  top 0.25em
+  top 0.15em
 
 .details
   font-weight 300
@@ -88,45 +88,47 @@ p
 .nudge
   margin-top 1em
 
+.print-only
+  display none
+
 @media all and (min-width: 30em)
-  .projects-details
-    display grid
-    grid-template-columns 50% 50%
-
-    article:nth-child(even)
-      margin-left 0.5em
-
-    article:nth-child(odd)
-      margin-right 0.5em
-
   .contact-info
-    display grid
-    grid-template-columns 50% 50%
+    display flex
+    flex-wrap wrap
 
-@media all and (min-width: 50em)
+  .contact-link
+    flex-basis 50%
+
+@media all and (min-width: big-break)
   body
     margin-top gutter-big
     margin-right gutter
     margin-bottom gutter-big
     margin-left gutter
 
-  .resume
-    display grid
-    grid-template-columns 33.3333% 66.6666%
-    max-width 50em
+@supports (display: flex)
+  @media all and (min-width: big-break)
+    .resume
+      display flex
+      flex-wrap wrap
+      max-width 50em
 
-  .block
-    margin-bottom 1em
+    .block
+      flex-basis 66.6666%
+      margin-bottom 1em
 
-  .block--main
-    margin-top 0
-    text-align right
+    .block--main
+      flex-basis 33.3333%
+      margin-top 0
+      text-align right
+
+@supports (display: grid)
+  @media all and (min-width: big-break)
+    .resume
+      display grid
+      grid-template-columns 33.3333% 66.6666%
 
 @media print
-  .resume
-    max-width 100%
-    margin 0
-
   body
     font-size 12px
     margin 0
@@ -134,3 +136,28 @@ p
 
   a
     text-decoration none
+
+  .print-only
+    display block
+
+  .resume
+    display flex
+    flex-wrap wrap
+    max-width 100%
+    margin 0
+
+  .block
+    flex-basis 66.6666%
+    margin-bottom 1em
+
+  .block--main
+    flex-basis 33.3333%
+    margin-top 0
+    text-align right
+
+  .contact-info
+    display flex
+    flex-wrap wrap
+
+  .contact-link
+    flex-basis 50%
