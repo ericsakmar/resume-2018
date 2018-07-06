@@ -31,6 +31,7 @@ gulp.task('inline', ['copy'], () =>
 gulp.task('serve', ['inline'], () =>
   gulp.src('./dist').pipe(
     webserver({
+      host: '0.0.0.0',
       port: 3000,
       livereload: true,
     }),
