@@ -93,45 +93,16 @@ a
   display none
 
 @media all and (min-width: 30em)
+  body
+    margin-top gutter-big
+    margin-bottom gutter-big
+
   .contact-info
     display flex
     flex-wrap wrap
 
   .contact-link
     flex-basis 50%
-
-@media all and (min-width: big-break)
-  body
-    margin-top gutter-big
-    margin-right gutter
-    margin-bottom gutter-big
-    margin-left gutter
-
-    /*
-@supports (display: flex)
-  @media all and (min-width: big-break)
-    .resume
-      display flex
-      flex-wrap wrap
-      max-width 50em
-
-    .block
-      flex-basis 66.6666%
-      margin-bottom 1em
-
-    .block--main
-      flex-basis 33.3333%
-      margin-top 0
-      text-align right
-      */
-
-      /*
-@supports (display: grid)
-  @media all and (min-width: big-break)
-    .resume
-      display grid
-      grid-template-columns 33.3333% 66.6666%
-      */
 
 @media print
   // printers seem to prefer floats over flexbox or grid
