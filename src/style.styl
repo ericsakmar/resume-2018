@@ -40,6 +40,7 @@ a
 
 .header--fancy
   font-family 'Abril Fatface', monospace
+  font-weight normal
   line-height 1.2em
   letter-spacing 0.05em
   background-image linear-gradient(
@@ -91,7 +92,7 @@ h2
   word-wrap break-word
 
 .badge
-  float right
+  display block
   width 7em
   margin-top 0.5em
   margin-bottom 0.5em
@@ -99,6 +100,9 @@ h2
 
 .print-only
   display none
+
+
+
 
 @media all and (min-width: 30em)
   body
@@ -118,42 +122,58 @@ h2
   .contact-link
     flex-basis 50%
 
+.header-section
+  grid-column-start 1
+  grid-column-end 4
+
+.professional-experience
+  grid-row-start 2
+  grid-column-start 1
+  grid-column-end 4
+
+.employment-history
+  grid-row-start 3
+  grid-column-start 1
+
+.certifications
+  grid-row-start 3
+  grid-column-start 2
+
+.education
+  grid-row-start 3
+  grid-column-start 3
+
+
+
+
 @media all and (min-width: 90em)
   .resume
     max-width 60em
     display grid
-    grid-template-columns 2fr 1fr
-
-  .header-section
-    grid-column-start 1
-    grid-column-end 3
+    grid-column-gap gutter
+    grid-template-columns 1fr 1fr 1fr
 
   .professional-experience
-    margin-right gutter-big
-    grid-row-start 2
-    grid-row-end 4
+    display grid
+    grid-column-gap gutter
+    grid-template-columns 1fr 1fr 1fr
 
-  .employment-history
-    grid-row-start 2
-    grid-column-start 2
+    & > .header
+      grid-row-start 1
+      grid-column-start 1
+      grid-column-end 4
 
-  .certifications
-    grid-row-start 3
-    grid-column-start 2
-
-    h2
+  .secondary > .header
       margin-top 0
 
-  .education
-    grid-row-start 4
-    grid-column-start 2
 
-    h2
-      margin-top 0
+
+
 
 @media print
   body
     margin 0
+    font-size 12px
 
   a
     text-decoration none
@@ -161,14 +181,38 @@ h2
   .screen-only
     display none
 
+  h1
+    font-size 3em
+    margin-top 0
+    margin-bottom 0
+
+  h2
+    font-size 1.5em
+    margin-bottom 0
+
   .resume
-    display block
-    max-width 100%
-    padding 2em 1em
+    max-width 60em
+    display grid
+    grid-column-gap gutter
+    grid-template-columns 1fr 1fr 1fr
+
+  .article
+    margin-bottom gutter
+
+  .professional-experience
+    display grid
+    grid-column-gap gutter
+    grid-template-columns 1fr 1fr 1fr
+
+    & > .header
+      grid-row-start 1
+      grid-column-start 1
+      grid-column-end 4
 
   .contact-info
     display flex
     flex-wrap wrap
+    width 75%
 
   .contact-link
-    flex-basis 50%
+    flex-basis 33.3333%
