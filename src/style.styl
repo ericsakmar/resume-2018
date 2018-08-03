@@ -152,16 +152,11 @@ h2
       margin-top 0
 
 @media print
-  // printers seem to prefer floats over flexbox or grid
   body
-    font-size 13px
     margin 0
 
   a
     text-decoration none
-
-  .print-only
-    display block
 
   .screen-only
     display none
@@ -170,20 +165,6 @@ h2
     display block
     max-width 100%
     padding 2em 1em
-
-  .block
-    display block
-    float left
-    width 66.6666%
-    margin-bottom 1em
-    border 0
-    clear right
-
-  .block--main
-    width 33.3333%
-    margin-top 0
-    text-align right
-    clear left
 
   .contact-info
     display flex
