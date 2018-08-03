@@ -1,6 +1,6 @@
 accent-color = #086788
 text-color = #523f38
-background-color = #e7ec3f
+background-color = #fff
 highlight-color = #1ea896
 
 gutter = 1em
@@ -16,6 +16,7 @@ html
 
 body
   color text-color
+  background-color background-color
   font-family 'Lato', sans-serif
   font-size 18px
   margin-top gutter
@@ -32,24 +33,30 @@ a
   max-width 30em
   margin 0 auto
 
-.header
-  margin-top 0
-  margin-bottom 0
-
-.header--sub
-  margin-top gutter
-
 .header--light
   font-weight normal
   font-size 1em
 
 .header--fancy
   color accent-color
-  border-bottom 0.1em solid accent-color
-  padding-bottom 0.1em
+  background-image linear-gradient(
+    background-color,
+    background-color 60%,
+    lighten(accent-color, 90%) 61%,
+    lighten(accent-color, 90%)
+  )
+
+h1
+  font-size 3em
+  line-height 1.5em
+
+h2
+  font-size 2em
+  line-height 1.5em
+  margin-top gutter-big
 
 .article
-  margin-bottom 2em
+  margin-bottom gutter-big
 
 .text
   margin-top 0.25em
