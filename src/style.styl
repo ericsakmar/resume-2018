@@ -92,7 +92,7 @@ h2
   word-wrap break-word
 
 .badge
-  display block
+  float right
   width 7em
   margin-top 0.5em
   margin-bottom 0.5em
@@ -100,27 +100,6 @@ h2
 
 .print-only
   display none
-
-
-
-
-@media all and (min-width: 30em)
-  body
-    margin-top gutter-big
-    margin-bottom gutter-big
-
-  h1
-    font-size 3em
-
-  h2
-    font-size 1.7em
-
-  .contact-info
-    display flex
-    flex-wrap wrap
-
-  .contact-link
-    flex-basis 50%
 
 .header-section
   grid-column-start 1
@@ -143,9 +122,26 @@ h2
   grid-row-start 3
   grid-column-start 3
 
+// mid-sized screens
+@media all and (min-width: 30em)
+  body
+    margin-top gutter-big
+    margin-bottom gutter-big
 
+  h1
+    font-size 3em
 
+  h2
+    font-size 1.7em
 
+  .contact-info
+    display flex
+    flex-wrap wrap
+
+  .contact-link
+    flex-basis 50%
+
+// big screens
 @media all and (min-width: 90em)
   .resume
     max-width 60em
@@ -166,10 +162,7 @@ h2
   .secondary > .header
       margin-top 0
 
-
-
-
-
+// print
 @media print
   body
     margin 0
@@ -216,3 +209,6 @@ h2
 
   .contact-link
     flex-basis 33.3333%
+
+  .badge
+    width 33%
