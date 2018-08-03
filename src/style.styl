@@ -1,10 +1,11 @@
-accent-color = dodgerblue
-dark-color = black
+accent-color = #0074d9
+text-color = #111
+background-color = #fff
+highlight-color = #85144b
+
 gutter = 1em
 gutter-big = 3em
 gutter-small = 0.5em
-light-color = white
-bg-color = black
 big-break = 50em
 
 html
@@ -14,52 +15,60 @@ html
   box-sizing inherit
 
 body
-  background-color ghostwhite
-  color dark-color
+  color text-color
+  background-color background-color
   font-family 'Lato', sans-serif
+  font-weight 400
   font-size 18px
   margin-top gutter
   margin-right gutter-small
   margin-bottom gutter
   margin-left gutter-small
+  line-height 1.4em
 
 a
   text-decoration-skip ink
   color accent-color
 
 .resume
-  display block
   max-width 30em
   margin 0 auto
 
-article:not(:last-child)
-  margin-bottom gutter
+.header--light
+  font-weight normal
+  font-size 1em
 
-.block
-  padding gutter-small
-  border 0.2em solid bg-color
-  background-color light-color
-
-.block--main
-  margin-top gutter
-  background-color bg-color
-  color light-color
-
-  .details
-    margin-top 0
-    opacity 0.75
-
-.h
-  font-weight 900
-  margin-top 0
-  margin-bottom 0
-  text-transform uppercase
+.header--fancy
+  font-family 'Abril Fatface', monospace
+  line-height 1.2em
   letter-spacing 0.05em
+  background-image linear-gradient(
+    background-color,
+    background-color 66%,
+    #ffdc00 66.1%,
+    #ffdc00
+  )
 
-p
+h1
+  font-size 10vw
+
+h2
+  font-size 7vw
+  margin-top gutter-big
+
+.article
+  margin-bottom gutter-big
+
+.text
   margin-top 0.25em
   margin-bottom 0
-  line-height 1.4em
+
+.highlights
+  padding-left 1.5em
+
+.highlight
+  font-weight 700
+  color highlight-color
 
 .contact-info
   margin-top gutter
@@ -73,7 +82,7 @@ p
   position relative
   top 0.15em
 
-.details
+.additional-info
   font-weight 300
   font-style italic
 
@@ -83,18 +92,25 @@ p
 
 .badge
   float right
-  width 10em
+  width 7em
   margin-top 0.5em
   margin-bottom 0.5em
   margin-left 0.5em
-
-.nudge
-  margin-top 1em
 
 .print-only
   display none
 
 @media all and (min-width: 30em)
+  body
+    margin-top gutter-big
+    margin-bottom gutter-big
+
+  h1
+    font-size 3em
+
+  h2
+    font-size 1.7em
+
   .contact-info
     display flex
     flex-wrap wrap
@@ -102,41 +118,11 @@ p
   .contact-link
     flex-basis 50%
 
-@media all and (min-width: big-break)
-  body
-    margin-top gutter-big
-    margin-right gutter
-    margin-bottom gutter-big
-    margin-left gutter
-
-@supports (display: flex)
-  @media all and (min-width: big-break)
-    .resume
-      display flex
-      flex-wrap wrap
-      max-width 50em
-
-    .block
-      flex-basis 66.6666%
-      margin-bottom 1em
-
-    .block--main
-      flex-basis 33.3333%
-      margin-top 0
-      text-align right
-
-@supports (display: grid)
-  @media all and (min-width: big-break)
-    .resume
-      display grid
-      grid-template-columns 33.3333% 66.6666%
-
 @media print
   // printers seem to prefer floats over flexbox or grid
   body
     font-size 13px
     margin 0
-    background-color #fff
 
   a
     text-decoration none
@@ -157,8 +143,6 @@ p
     float left
     width 66.6666%
     margin-bottom 1em
-    background-color light-color
-    color dark-color
     border 0
     clear right
 
@@ -174,4 +158,3 @@ p
 
   .contact-link
     flex-basis 50%
-    color dark-color

@@ -5,190 +5,141 @@
   <title>Eric Sakmar</title>
   <meta name="description" content="Eric Sakmar Professional Resume">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Lato:300i,400,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300i,400|Abril+Fatface" rel="stylesheet">
   <link rel="stylesheet" href="style.css" inline>
 </head>
 
 <body>
+
   <!-- thanks for looking at the source! you can see the whole thing at:
     https://github.com/ericsakmar/resume-2018 -->
-  <main class="resume" id="top">
-    <header class="block block--main header">
-      <h1 class="h">Eric Sakmar</h1>
-    </header>
 
-    <section class="block contact">
-      <h2 class="h">Software Engineer</h2>
-      <p>&#8230;with a long career across the full stack.</p>
+  <main class="resume">
+    <h1 class="header header--fancy">Eric Sakmar</h1>
+    <p>Software engineer with a long career across the full stack.</p>
 
-      <p class="contact-info">
-        <a class="contact-link" href="mailto:eric.sakmar@gmail.com">
-          <img class="contact-icon" src="assets/mail.svg" aria-hidden="true" inline />eric.sakmar@gmail.com
-        </a>
+    <div class="contact-info">
+      <a class="contact-link" href="mailto:eric.sakmar@gmail.com">
+        <img class="contact-icon" src="assets/mail.svg" aria-hidden="true" inline />eric.sakmar@gmail.com
+      </a>
 
-        <a class="contact-link" href="tel:18149340702">
-          <img class="contact-icon" src="assets/phone.svg" aria-hidden="true" inline />814-934-0702
-        </a>
+      <a class="contact-link" href="tel:18149340702">
+        <img class="contact-icon" src="assets/phone.svg" aria-hidden="true" inline />814-934-0702
+      </a>
 
-        <a class="contact-link" href="https://ericsakmar.com">
-          <img class="contact-icon" src="assets/globe.svg" aria-hidden="true" inline />ericsakmar.com
-        </a>
+      <a class="contact-link" href="https://github.com/ericsakmar">
+        <img class="contact-icon" src="assets/github.svg" aria-hidden="true" inline />ericsakmar
+      </a>
 
-        <span class="contact-link">
-          <img class="contact-icon" src="assets/map-pin.svg" aria-hidden="true" inline />Pittsburgh, PA
-        </span>
+      <a class="contact-link" href="https://www.linkedin.com/in/eric-sakmar/">
+        <img class="contact-icon" src="assets/linkedin.svg" aria-hidden="true" inline />eric-sakmar
+      </a>
+
+      <a class="contact-link" href="https://ericsakmar.com">
+        <img class="contact-icon" src="assets/globe.svg" aria-hidden="true" inline />ericsakmar.com
+      </a>
+
+      <span class="contact-link">
+        <img class="contact-icon" src="assets/map-pin.svg" aria-hidden="true" inline />Pittsburgh, PA
+      </span>
+    </div>
+
+    <h2 class="header header--sub header--fancy">Professional Experience</h2>
+
+    <article class="article">
+      <h3 class="header header--sub header--light">
+        <span class="highlight">Front end web development</span> on enterprise projects that:
+      </h3>
+      <ul class="highlights">
+        <li>interface with big-data systems by allowing analysts to set up data sources and connect them to processing sequences</li>
+        <li>feed data into a decision-making system and visualize the results</li>
+        <li>browse and analyze geospatial data</li>
+      </ul>
+      <p class="additional-info">
+      <span class="highlight">Using</span> ASP.NET, Angular, CSS, D3, HTML, jQuery, JSP, JavaScript, Preprocessors, React, Redux, Struts, TypeScript;
+        <span class="highlight">Automated testing</span> with Jasmine, Jest, Karma, Mocha, Protractor;
+        <span class="highlight">Build tools</span> with Grunt, Gulp, Webpack, Yeoman
       </p>
-    </section>
+    </article>
 
-    <section id="experience" class="block block--main experience">
-      <h2 class="h">Professional Experience</h2>
-      <article class="nudge">
-        <h3 class="h">Concurrent Technologies Corporation</h3>
-        <p>Johnstown,&nbsp;PA; Alexandria,&nbsp;VA; Arlington,&nbsp;VA; Pittsburgh,&nbsp;PA&nbsp;(remote)</p>
-        <p class="details">May 2006 to Present</p>
-      </article>
+    <article class="article">
+      <h3 class="header header--sub header--light">
+        <span class="highlight">Mobile development</span> of apps that:
+      </h3>
+      <ul class="highlights">
+        <li>search for personnel skills and display them geographically</li>
+        <li>track sleep habits and offer advice on how that affects performance</li>
+        <li>calculate safety requirements of electrical systems</li>
+      </ul>
+      <p class="additional-info">
+        <span class="highlight">Android</span> with Butterknife, Java, RxAndroid, Support Libraries;
+        <span class="highlight">iOS</span> with CoreData, Objective-C;
+        Mobile Web, Offline Support, Multi-Device Support
+      </p>
+    </article>
 
-      <article>
-        <h3 class="h">Promotions</h3>
-        <p>Associate Software Engineer</p>
-        <p class="details">May 2008</p>
-        <p>Staff Software Engineer</p>
-        <p class="details">May 2010</p>
-        <p>Senior Software Engineer</p>
-        <p class="details">June 2016</p>
-      </article>
-    </section>
+    <article class="article">
+      <h3 class="header header--sub header--light">
+        <span class="highlight">Back end development</span> of systems that:
+      </h3>
+      <ul class="highlights">
+        <li>provide secure REST services</li>
+        <li>perform federated searches across disparate data sources</li>
+        <li>interface with third party systems</li>
+      </ul>
+      <p class="additional-info">
+        <span class="highlight">Using</span> Java, Node.js, Ruby, Scala;
+        <span class="highlight">Dependency injection</span> with Guice, HK2;
+        <span class="highlight">Automated testing</span> with JUnit, Mocha, RSpec, ScalaTest;
+        <span class="highlight">Build tools</span> with Maven, Gradle, NPM
+      </p>
+    </article>
 
-    <section class="block experience-details">
-      <article>
-        <h3 class="h">Front End Web Development</h3>
-        <p class="highlights">
-          Highlights include creating front ends that
-          interface with big-data systems by allowing analysts to set up data sources and connect them to processing sequences;
-          feed data into a decision-making system and visualize the results;
-          browse and analyze geospatial data.
-        </p>
-        <p class="details">
-          ASP.NET, Angular, CSS, D3, HTML, jQuery, JSP, JavaScript, Preprocessors, React, Redux, Struts, TypeScript;
-          Automated testing with Jasmine, Jest, Karma, Mocha, Protractor;
-          Build tools with Grunt, Gulp, Webpack, Yeoman
-        </p>
-      </article>
+    <h2 class="header header--sub header--fancy">Employment History</h2>
 
-      <article>
-        <h3 class="h">Mobile Development</h3>
-        <p class="highlights">
-          Highlights include creating apps for phones and tablets that 
-          search for personnel skills and display them geographically;
-          track sleep habits and offer advice on how that affects performance;
-          complete and file reports;
-          calculate safety requirements of electrical systems.
-        </p>
-        <p class="details">
-          Android with Butterknife, Java, RxAndroid, Support Libraries;
-          iOS with CoreData, Objective-C;
-          Mobile Web, Offline Support, Multi-Device Support
-        </p>
-      </article>
+    <article class="article">
+      <h3 class="header header--sub">Concurrent Technologies Corporation</h3>
+      <p class="text">
+        Johnstown,&nbsp;PA; Alexandria,&nbsp;VA; Arlington,&nbsp;VA; Pittsburgh,&nbsp;PA&nbsp;(remote)
+        <br/>
+        <span class="text additional-info">May 2006 to Present</span>
+      </p>
+    </article>
 
-      <article>
-        <h3 class="h">Back End Development</h3>
-        <p class="highlights">
-          Highlights include creating back ends that provide secure REST services; 
-          perform federated searches across disparate data sources;
-          interface with third party systems.
-        </p>
-        <p class="details">
-          Java, Node.js, Ruby, Scala;
-          Dependency injection with Guice, HK2;
-          Automated testing with JUnit, Mocha, RSpec, ScalaTest;
-          Build tools with Maven, Gradle, NPM
-        </p>
-      </article>
-    </section>
+    <article class="article">
+      <h3 class="header header--sub">Promotions</h3>
+      <p class="text">Associate Software Engineer<br/><span class="additional-info">May 2008</span></p>
+      <p class="text">Staff Software Engineer<br/><span class="additional-info">May 2010</span></p>
+      <p class="text">Senior Software Engineer<br/><span class="additional-info">June 2016</span></p>
+    </article>
 
-    <section id="certs" class="block block--main certs">
-      <h2 class="h">Certifications</h2>
-    </section>
+    <h2 class="header header--sub header--fancy">Certifications</h2>
 
-    <section class="block certs-details">
-      <article>
-        <h3 class="h">Mobile Web Specialist, Google Certified</h3>
-        <p class="highlights">
-          <img class="badge" src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/11358263"
-            alt="Mobile Web Specialist Badge"/>
-          &ldquo;The Mobile Web Developer Certification is a performance-based exam that
-          challenges mobile web developers to write code in response to real-world
-          tasks. Based on extensive job task analyses, candidates earning this
-          certification have shown that they have the skills expected of an
-          advanced-level mobile web developer, and are capable of writing
-          performant and responsive applications for the mobile web.&rdquo;
-        </p>
-        <p class="details">Issued on March 23, 2018. Expires on March 23, 2021.</p>
-        <p class="highlights">
-          <a class="external-link screen-only" 
-            href="https://www.credential.net/q2dyt5ic?key=e1c5f1dc43e0c81ca277d556d51f8dcf5f821f98959b40aa2d9e8a4a5bbb7cd3">View certificate</a>
-        </p>
-      </article>
-    </section>
+    <article class="article">
+      <h3 class="header header--sub">Mobile Web Specialist, Google Certified</h3>
+      <p class="text">
+        <img class="badge" src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/11358263"
+          alt="Mobile Web Specialist Badge"/>
+        &ldquo;The Mobile Web Developer Certification is a performance-based exam that
+        challenges mobile web developers to write code in response to real-world
+        tasks.&rdquo;
+      </p>
+      <p class="text additional-info">Issued on March 23, 2018. Expires on March 23, 2021.</p>
+      <p class="text screen-only">
+        <a class="external-link" 
+          href="https://www.credential.net/q2dyt5ic?key=e1c5f1dc43e0c81ca277d556d51f8dcf5f821f98959b40aa2d9e8a4a5bbb7cd3">View certificate</a>
+      </p>
+    </article>
 
-    <section id="education" class="block block--main education">
-      <h2 class="h">Education</h2>
-      <p>University of Pittsburgh, Johnstown Pennsylvania</p>
-      <p class="details">August 2002 to May 2006</p>
-    </section>
+    <h2 class="header header--sub header--fancy">Education</h2>
 
-    <section class="block education-details">
-      <h3 class="h">Bachelor of Science</h3>
-      <p class="highlights">Computer Science</p>
-      <p class="details">Presidential Scholar, Magna Cum Laude</p>
-    </section>
+    <article class="article">
+      <h3 class="header header--sub">University of Pittsburgh at Johnstown</h3>
+      <p class="text">Bachelor of Science, Computer Science</p>
+      <p class="text">Presidential Scholar, Magna Cum Laude</p>
+      <p class="text additional-info">August 2002 to May 2006</p>
+    </article>
 
-    <section id="projects" class="block block--main projects">
-      <h2 class="h">Other Projects</h2>
-      <p>Personal &amp; Freelance</p>
-    </section>
-
-    <section class="block projects-details">
-      <article>
-        <h3 class="h">National Geographic Kids</h3>
-        <p>Created a series of mini games for their iPad publication.</p>
-        <p class="details">Freelance project; Web with CSS, HTML, Vanilla JavaScript</p>
-      </article>
-
-      <article>
-        <h3 class="h">For the Love of Dog</h3>
-        <p>Custom application for managing a dog walking business.</p>
-        <p class="details">Freelance project; Ruby on Rails</p>
-      </article>
-
-      <article>
-        <h3 class="h">Shows Near Me</h3>
-        <p>A crowd-sourced community calendar for live events in Pittsburgh.</p>
-        <p class="details">Progressive Web App, Vue</p>
-        <p><a class="external-link" href="https://pgh.showsnear.me">https://pgh.showsnear.me</a></p>
-      </article>
-
-      <article>
-        <h3 class="h">Metronome</h3>
-        <p>A no-frills online metronome.</p>
-        <p class="details">Progressive Web App, Web Audio</p>
-        <p><a class="external-link" href="https://ericsakmar.github.io/metronome/">https://ericsakmar.github.io/metronome/</a></p>
-      </article>
-
-      <article>
-        <h3 class="h">Oh No Volcano!</h3>
-        <p>A 2d physics based adventure game for iOS. Released to App Store in February of 2015.</p>
-        <p class="details">iOS with Box2D, Cocos2D, GameCenter, Objective-C</p>
-      </article>
-
-      <article>
-        <h3 class="h">Arduino &amp Raspberry&nbsp;Pi</h3>
-        <p>Miscellaneous tinkering, often involving LEDs, audio signal processing,
-        and game console emulators.</p>
-        <p class="details">Unix, Python</p>
-      </article>
-    </section>
   </main>
 </body>
 </html>
