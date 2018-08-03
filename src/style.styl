@@ -118,6 +118,39 @@ h2
   .contact-link
     flex-basis 50%
 
+@media all and (min-width: 90em)
+  .resume
+    max-width 60em
+    display grid
+    grid-template-columns 2fr 1fr
+
+  .header-section
+    grid-column-start 1
+    grid-column-end 3
+
+  .professional-experience
+    margin-right gutter-big
+    grid-row-start 2
+    grid-row-end 4
+
+  .employment-history
+    grid-row-start 2
+    grid-column-start 2
+
+  .certifications
+    grid-row-start 3
+    grid-column-start 2
+
+    h2
+      margin-top 0
+
+  .education
+    grid-row-start 4
+    grid-column-start 2
+
+    h2
+      margin-top 0
+
 @media print
   // printers seem to prefer floats over flexbox or grid
   body
