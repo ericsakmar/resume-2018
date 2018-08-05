@@ -40,7 +40,6 @@ a
   max-width 30em
   margin 0 auto
   grid-column-gap gutter
-  -ms-grid-columns 1fr 1fr 1fr
   grid-template-columns 1fr 1fr 1fr
 
 h1
@@ -89,7 +88,6 @@ h2
   color highlight-color
 
 .contact-info
-  -ms-grid-columns 1fr 1fr
   grid-template-columns 1fr 1fr
 
 .contact-link
@@ -117,60 +115,32 @@ h2
   margin-left 0.5em
 
 .header__main, .summary, .contact-info, .professional-experience__header
-  -ms-grid-column 1
-  -ms-grid-column-span 3
   grid-column 1 / span 3
 
-.professional-experience__front-end
-  -ms-grid-column 1
-  -ms-grid-row 5
-
-.professional-experience__mobile
-  -ms-grid-column 2
-  -ms-grid-row 5
-
-.professional-experience__back-end
-  -ms-grid-column 3
-  -ms-grid-row 5
-
 .employment-history__header
-  -ms-grid-column 1
   grid-column-start 1
-  -ms-grid-row 6
   grid-row-start 6
 
 .certifications__header
-  -ms-grid-row-align end
   align-self end
-  -ms-grid-column 2
   grid-column-start 2
-  -ms-grid-row 6
   grid-row-start 6
 
 .education__header
-  -ms-grid-row-align end
   align-self end
-  -ms-grid-column 3
   grid-column-start 3
-  -ms-grid-row 6
   grid-row-start 6
 
 .employment-history__employer
-  -ms-grid-column 1
   grid-column-start 1
-  -ms-grid-row 7
   grid-row-start 7
 
 .certifications
-  -ms-grid-column 2
   grid-column-start 2
-  -ms-grid-row 7
   grid-row-start 7
 
 .education
-  -ms-grid-column 3
   grid-column-start 3
-  -ms-grid-row 7
   grid-row-start 7
 
 // mid-sized screens
@@ -180,70 +150,19 @@ h2
     margin-bottom gutter-big
 
   .contact-info
-    display -ms-grid
     display grid
-
-    &:nth-child(1)
-      -ms-grid-column 1
-      -ms-grid-row 1
-
-    &:nth-child(2)
-      -ms-grid-column 2
-      -ms-grid-row 1
-
-    &:nth-child(3)
-      -ms-grid-column 1
-      -ms-grid-row 2
-
-    &:nth-child(4)
-      -ms-grid-column 2
-      -ms-grid-row 2
-
-    &:nth-child(5)
-      -ms-grid-column 1
-      -ms-grid-row 3
-
-    &:nth-child(6)
-      -ms-grid-column 2
-      -ms-grid-row 3
 
 // large screens
 @media all and (min-width: 50em)
   .resume
     max-width 50em
-    display -ms-grid
     display grid
 
   h1
     font-size font-size-huge
 
   .contact-info
-    -ms-grid-coluns 1fr 1fr 1fr
     grid-template-columns 1fr 1fr 1fr
-
-    &:nth-child(1)
-      -ms-grid-columnn 1
-      -ms-grid-row 1
-
-    &:nth-child(2)
-      -ms-grid-columnn 2
-      -ms-grid-row 1
-
-    &:nth-child(3)
-      -ms-grid-columnn 3
-      -ms-grid-row 1
-
-    &:nth-child(4)
-      -ms-grid-columnn 1
-      -ms-grid-row 2
-
-    &:nth-child(5)
-      -ms-grid-columnn 2
-      -ms-grid-row 2
-
-    &:nth-child(6)
-      -ms-grid-columnn 3
-      -ms-grid-row 2
 
 // print
 @media print
@@ -258,7 +177,6 @@ h2
 
   .resume
     max-width 100%
-    display -ms-grid
     display grid
 
   h1, h2, .article
@@ -272,8 +190,5 @@ h2
     margin-top 1em
 
   .contact-info
-    display -ms-grid
     display grid
-    -ms-grid-coluns 1fr 1fr 1fr
     grid-template-columns 1fr 1fr 1fr
-
