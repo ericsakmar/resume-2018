@@ -155,19 +155,20 @@ h2
 
 // large screens
 @media all and (min-width: 50em)
-  @supports (display: grid)
-    .resume
-      display grid
-      max-width 50em
-
-    h1
-      font-size font-size-huge
-
   .resume
     width 50em
 
   .contact-info
     grid-template-columns 1fr 1fr 1fr
+
+  @supports (display: grid)
+    .resume
+      display grid
+      max-width 50em
+      width auto
+
+    h1
+      font-size font-size-huge
 
 // print
 @media print
