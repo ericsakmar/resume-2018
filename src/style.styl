@@ -40,12 +40,14 @@ h1
 
 h2
   font-size 1.618em
+  margin-top gutter-big
 
 .header--light
   font-weight normal
   font-size 1em
 
 .header--fancy
+  align-self end
   font-family 'Space Mono', monospace
   font-weight 700
   text-transform lowercase
@@ -58,9 +60,6 @@ h2
   height 0.33em
   background-color accent-color-light
   margin-top -0.34em
-
-h2
-  margin-top gutter-big
 
 .article
   margin-bottom gutter-big
@@ -78,9 +77,6 @@ h2
 .highlight
   font-weight 700
   color highlight-color
-
-.contact-info
-  margin-top gutter
 
 .contact-link
   display block
@@ -109,27 +105,6 @@ h2
 .print-only
   display none
 
-.header-section
-  grid-column-start 1
-  grid-column-end 4
-
-.professional-experience
-  grid-row-start 2
-  grid-column-start 1
-  grid-column-end 4
-
-.employment-history
-  grid-row-start 3
-  grid-column-start 1
-
-.certifications
-  grid-row-start 3
-  grid-column-start 2
-
-.education
-  grid-row-start 3
-  grid-column-start 3
-
 // mid-sized screens
 @media all and (min-width: 30em)
   body
@@ -142,27 +117,6 @@ h2
 
   .contact-link
     flex-basis 50%
-
-// big screens
-/*
-@media all and (min-width: 90em)
-  .resume
-    max-width 60em
-    display grid
-    grid-column-gap gutter
-    grid-template-columns 1fr 1fr 1fr
-
-  .professional-experience
-    display grid
-    grid-column-gap gutter
-    grid-template-columns 1fr 1fr 1fr
-
-    & > .header
-      grid-row-start 1
-      grid-column-start 1
-      grid-column-end 4
-
-      */
 
 // print
 @media print
@@ -181,13 +135,34 @@ h2
     margin-bottom 0
 
   h2
+    margin-top 2em
     margin-bottom 0
 
   .resume
-    max-width 60em
+    max-width 100%
     display grid
     grid-column-gap gutter
     grid-template-columns 1fr 1fr 1fr
+
+  .header--main, .summary, .contact-info, .professional-experience--header
+    grid-column 1 / span 3
+
+  .employment-history--header
+    grid-column-start 1
+    grid-row-start 6
+
+  .employment-history--employer, .employment-history--promotions
+    grid-column-start 1
+
+  .certifications--header
+    align-self end
+    grid-column-start 2
+    grid-row-start 6
+
+  .education--header
+    align-self end
+    grid-column-start 3
+    grid-row-start 6
 
   .article
     margin-bottom gutter
@@ -205,7 +180,6 @@ h2
   .contact-info
     display flex
     flex-wrap wrap
-    width 75%
 
   .contact-link
     flex-basis 33.3333%
