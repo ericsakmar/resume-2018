@@ -9,6 +9,11 @@ gutter-big = 3em
 gutter-small = 0.5em
 big-break = 50em
 
+font-size-huge = 4.236em
+font-size-big = 2.618em
+font-size-med = 1.618em
+font-size-norm = 1em
+
 html
   box-sizing border-box
 
@@ -34,17 +39,19 @@ a
 .resume
   max-width 30em
   margin 0 auto
+  grid-column-gap gutter
+  grid-template-columns 1fr 1fr 1fr
 
 h1
-  font-size 2.618em
+  font-size font-size-big
 
 h2
-  font-size 1.618em
+  font-size font-size-med
   margin-top gutter-big
 
 .header--light
   font-weight normal
-  font-size 1em
+  font-size font-size-norm
 
 .header--fancy
   align-self end
@@ -78,6 +85,10 @@ h2
   font-weight 700
   color highlight-color
 
+.contact-info
+  -ms-grid-columns 1fr 1fr
+  grid-template-columns 1fr 1fr
+
 .contact-link
   display block
   margin-bottom 0.25em
@@ -102,6 +113,26 @@ h2
   margin-bottom 0.5em
   margin-left 0.5em
 
+.header--main, .summary, .contact-info, .professional-experience--header
+  grid-column 1 / span 3
+
+.employment-history--header
+  grid-column-start 1
+  grid-row-start 6
+
+.employment-history--employer, .employment-history--promotions
+  grid-column-start 1
+
+.certifications--header
+  align-self end
+  grid-column-start 2
+  grid-row-start 6
+
+.education--header
+  align-self end
+  grid-column-start 3
+  grid-row-start 6
+
 // mid-sized screens
 @media all and (min-width: 30em)
   body
@@ -111,8 +142,19 @@ h2
   .contact-info
     display -ms-grid
     display grid
-    -ms-grid-columns 1fr 1fr
-    grid-template-columns 1fr 1fr
+
+// large screens
+@media all and (min-width: 50em)
+  .resume
+    max-width 50em
+    display grid
+
+  h1
+    font-size font-size-huge
+
+  .contact-info
+    -ms-grid-coluns 1fr 1fr 1fr
+    grid-template-columns 1fr 1fr 1fr
 
 // print
 @media print
@@ -125,44 +167,23 @@ h2
     display flex // also for vertical centering
     align-items center
 
-  h1
-    font-size 4.236em
-    margin-top 0
-    margin-bottom 0
-
-  h2
-    margin-top 1em
-    margin-bottom 0
-
   .resume
     max-width 100%
     display grid
-    grid-column-gap gutter
-    grid-template-columns 1fr 1fr 1fr
+
+  h1, h2, .article
+    margin-bottom 0
+
+  h1
+    font-size font-size-huge
+    margin-top 0
+
+  h2
+    margin-top 1em
 
   .contact-info
+    display -ms-grid
+    display grid
     -ms-grid-coluns 1fr 1fr 1fr
     grid-template-columns 1fr 1fr 1fr
 
-  .header--main, .summary, .contact-info, .professional-experience--header
-    grid-column 1 / span 3
-
-  .employment-history--header
-    grid-column-start 1
-    grid-row-start 6
-
-  .employment-history--employer, .employment-history--promotions
-    grid-column-start 1
-
-  .certifications--header
-    align-self end
-    grid-column-start 2
-    grid-row-start 6
-
-  .education--header
-    align-self end
-    grid-column-start 3
-    grid-row-start 6
-
-  .article
-    margin-bottom 0
