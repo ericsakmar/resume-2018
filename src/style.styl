@@ -151,11 +151,16 @@ h2
   .contact-info
     display grid
 
+  @supports not (display: grid)
+    .resume
+      width 30em
+
 // large screens
 @media all and (min-width: 50em)
-  .resume
-    max-width 50em
-    display grid
+  @supports (display: grid)
+    .resume
+      display grid
+      max-width 50em
 
   h1
     font-size font-size-huge
