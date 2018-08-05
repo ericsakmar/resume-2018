@@ -40,6 +40,7 @@ a
   max-width 30em
   margin 0 auto
   grid-column-gap gutter
+  -ms-grid-columns 1fr 1fr 1fr
   grid-template-columns 1fr 1fr 1fr
 
 h1
@@ -116,23 +117,34 @@ h2
   margin-left 0.5em
 
 .header--main, .summary, .contact-info, .professional-experience--header
+  -ms-grid-column 1
+  -ms-grid-column-span 3
   grid-column 1 / span 3
 
 .employment-history--header
+  -ms-grid-column 1
   grid-column-start 1
+  -ms-grid-row 6
   grid-row-start 6
 
 .employment-history--employer, .employment-history--promotions
+  -ms-grid-column 1
   grid-column-start 1
 
 .certifications--header
+  -ms-grid-row-align end
   align-self end
+  -ms-grid-column 2
   grid-column-start 2
+  -ms-grid-row 6
   grid-row-start 6
 
 .education--header
+  -ms-grid-row-align end
   align-self end
+  -ms-grid-column 3
   grid-column-start 3
+  -ms-grid-row 6
   grid-row-start 6
 
 // mid-sized screens
@@ -149,6 +161,7 @@ h2
 @media all and (min-width: 50em)
   .resume
     max-width 50em
+    display -ms-grid
     display grid
 
   h1
@@ -171,6 +184,7 @@ h2
 
   .resume
     max-width 100%
+    display -ms-grid
     display grid
 
   h1, h2, .article
