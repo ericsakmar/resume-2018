@@ -183,6 +183,30 @@ h2
     display -ms-grid
     display grid
 
+    &:nth-child(1)
+      -ms-grid-column 1
+      -ms-grid-row 1
+
+    &:nth-child(2)
+      -ms-grid-column 2
+      -ms-grid-row 1
+
+    &:nth-child(3)
+      -ms-grid-column 1
+      -ms-grid-row 2
+
+    &:nth-child(4)
+      -ms-grid-column 2
+      -ms-grid-row 2
+
+    &:nth-child(5)
+      -ms-grid-column 1
+      -ms-grid-row 3
+
+    &:nth-child(6)
+      -ms-grid-column 2
+      -ms-grid-row 3
+
 // large screens
 @media all and (min-width: 50em)
   .resume
@@ -196,6 +220,30 @@ h2
   .contact-info
     -ms-grid-coluns 1fr 1fr 1fr
     grid-template-columns 1fr 1fr 1fr
+
+    &:nth-child(1)
+      -ms-grid-columnn 1
+      -ms-grid-row 1
+
+    &:nth-child(2)
+      -ms-grid-columnn 2
+      -ms-grid-row 1
+
+    &:nth-child(3)
+      -ms-grid-columnn 3
+      -ms-grid-row 1
+
+    &:nth-child(4)
+      -ms-grid-columnn 1
+      -ms-grid-row 2
+
+    &:nth-child(5)
+      -ms-grid-columnn 2
+      -ms-grid-row 2
+
+    &:nth-child(6)
+      -ms-grid-columnn 3
+      -ms-grid-row 2
 
 // print
 @media print
