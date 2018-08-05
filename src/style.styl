@@ -102,9 +102,6 @@ h2
   margin-bottom 0.5em
   margin-left 0.5em
 
-.print-only
-  display none
-
 // mid-sized screens
 @media all and (min-width: 30em)
   body
@@ -123,12 +120,6 @@ h2
   body
     margin 0
     font-size 12px
-
-  a
-    text-decoration none
-
-  .screen-only
-    display none
 
   h1
     margin-top 0
@@ -165,17 +156,7 @@ h2
     grid-row-start 6
 
   .article
-    margin-bottom gutter
-
-  .professional-experience
-    display grid
-    grid-column-gap gutter
-    grid-template-columns 1fr 1fr 1fr
-
-    & > .header
-      grid-row-start 1
-      grid-column-start 1
-      grid-column-end 4
+    margin-bottom 0
 
   .contact-info
     display flex
