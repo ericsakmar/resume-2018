@@ -109,11 +109,8 @@ h2
     margin-bottom gutter-big
 
   .contact-info
-    display flex
-    flex-wrap wrap
-
-  .contact-link
-    flex-basis 50%
+    display grid
+    grid-template-columns 1fr 1fr
 
 // print
 @media print
@@ -141,6 +138,9 @@ h2
     grid-column-gap gutter
     grid-template-columns 1fr 1fr 1fr
 
+  .contact-info
+    grid-template-columns 1fr 1fr 1fr
+
   .header--main, .summary, .contact-info, .professional-experience--header
     grid-column 1 / span 3
 
@@ -163,10 +163,3 @@ h2
 
   .article
     margin-bottom 0
-
-  .contact-info
-    display flex
-    flex-wrap wrap
-
-  .contact-link
-    flex-basis 33.3333%
