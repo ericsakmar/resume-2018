@@ -117,11 +117,17 @@ h2
 
 // print
 @media print
+  html, body
+    height 100% // for vertical centering
+
   body
     margin 0
     font-size 12px
+    display flex // also for vertical centering
+    align-items center
 
   h1
+    font-size 4.236em
     margin-top 0
     margin-bottom 0
 
