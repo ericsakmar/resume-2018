@@ -93,9 +93,6 @@ h3
   margin-top 0
   margin-bottom 0
 
-.experience
-  page-break-inside avoid
-
 .experience__summary
   margin-bottom 0
 
@@ -145,13 +142,10 @@ h3
 
 // large screens
 @media all and (min-width: big-break)
-  .resume
-    max-width big-break
-
   @supports (display: grid)
     .resume
       display grid
-      width auto
+      max-width big-break
 
     h1
       font-size font-size-huge
@@ -175,3 +169,10 @@ h3
 
   h2
     margin-top 1em
+
+  .certifications, .education
+    margin-top gutter
+
+  .break-before
+    page-break-before always
+
