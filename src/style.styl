@@ -7,7 +7,7 @@ highlight-color = #85144b
 gutter = 1em
 gutter-big = 3em
 gutter-small = 0.5em
-big-break = 50em
+big-break = 43em
 
 font-size-huge = 4.236em
 font-size-big = 2.618em
@@ -40,7 +40,7 @@ a
   display block
   max-width 30em
   margin 0 auto
-  grid-column-gap gutter
+  grid-column-gap 2em
   grid-template-columns 2fr 1fr
   grid-template-rows auto auto auto auto 1fr
 
@@ -93,6 +93,9 @@ h3
   margin-top 0
   margin-bottom 0
 
+.experience
+  page-break-inside avoid
+
 .experience__summary
   margin-bottom 0
 
@@ -108,7 +111,7 @@ h3
   margin-bottom 0.5em
   margin-left 0.5em
 
-.contact-info, .professional-experience, .certifications, .education
+.certifications, .education
   margin-top gutter-big
 
 // these will only kick in on big screens
@@ -141,14 +144,13 @@ h3
     margin-bottom gutter-big
 
 // large screens
-@media all and (min-width: 50em)
+@media all and (min-width: big-break)
   .resume
-    width 50em
+    max-width big-break
 
   @supports (display: grid)
     .resume
       display grid
-      max-width 50em
       width auto
 
     h1
@@ -156,14 +158,9 @@ h3
 
 // print
 @media print
-  html, body
-    height 100% // for vertical centering
-
   body
     margin 0
     font-size 12px
-    display flex // also for vertical centering
-    align-items center
 
   .resume
     max-width 100%
