@@ -7,7 +7,7 @@ highlight-color = #85144b
 gutter = 1em
 gutter-big = 3em
 gutter-small = 0.5em
-big-break = 50em
+big-break = 43em
 
 font-size-huge = 4.236em
 font-size-big = 2.618em
@@ -30,7 +30,7 @@ body
   margin-right gutter-small
   margin-bottom gutter
   margin-left gutter-small
-  line-height 1.4em
+  line-height 1.5em
 
 a
   text-decoration-skip ink
@@ -40,8 +40,9 @@ a
   display block
   max-width 30em
   margin 0 auto
-  grid-column-gap gutter
-  grid-template-columns 1fr 1fr 1fr
+  grid-column-gap gutter-big
+  grid-template-columns 2fr 1fr
+  grid-template-rows auto auto auto auto 1fr
 
 h1
   font-size font-size-big
@@ -49,18 +50,12 @@ h1
 
 h2
   font-size font-size-med
-  margin-top gutter-big
+  margin-top 1rem
   margin-bottom 1rem
 
 h3
-  font-size font-size-norm
-  font-weight 700
   margin-top gutter
   margin-bottom gutter
-
-.header--light
-  font-weight normal
-  font-size font-size-norm
 
 .header--fancy
   align-self end
@@ -77,25 +72,13 @@ h3
   background-color accent-color-light
   margin-top -0.34em
 
-.article
-  margin-bottom gutter-big
-
-.text
-  margin-top 0.25em
-  margin-bottom 0
-
-.highlights
-  padding-left 1.5em
-
-  li
-    margin-bottom 0.5em
-
 .highlight
   font-weight 700
   color highlight-color
 
-.contact-info
-  grid-template-columns 1fr 1fr
+.em
+  font-weight 300
+  font-style italic
 
 .contact-link
   display block
@@ -106,49 +89,50 @@ h3
   position relative
   top 0.15em
 
-.additional-info
+.employment__text
+  margin-top 0
+  margin-bottom 0
+
+.experience__summary
+  margin-bottom 0
+
+.experience__stack
   font-weight 300
   font-style italic
-
-.external-link
-  overflow-wrap break-word
-  word-wrap break-word
+  margin-top 0
 
 .badge
   float right
-  width 7em
+  width 6em
   margin-top 0.5em
   margin-bottom 0.5em
   margin-left 0.5em
 
-.header__main, .summary, .contact-info, .professional-experience__header
-  grid-column 1 / span 3
+.certifications, .education
+  margin-top gutter-big
 
-.employment-history__header
-  grid-column-start 1
-  grid-row-start 6
+// these will only kick in on big screens
+// and when grid is supported
+.header__main, .summary
+  grid-column 1 / span 2
 
-.certifications__header
-  align-self end
+.contact-info
   grid-column-start 2
-  grid-row-start 6
+  grid-row-start 3
 
-.education__header
-  align-self end
-  grid-column-start 3
-  grid-row-start 6
+.professional-experience
+  grid-row 3 / span 3
 
-.employment-history__employer
-  grid-column-start 1
-  grid-row-start 7
+.professional-experience__level:not(:last-child)
+  border-bottom 0.1rem solid accent-color-light
 
 .certifications
   grid-column-start 2
-  grid-row-start 7
+  grid-row-start 4
 
 .education
-  grid-column-start 3
-  grid-row-start 7
+  grid-column-start 2
+  grid-row-start 5
 
 // mid-sized screens
 @media all and (min-width: 30em)
@@ -156,42 +140,27 @@ h3
     margin-top gutter-big
     margin-bottom gutter-big
 
-  .contact-info
-    display grid
-
 // large screens
-@media all and (min-width: 50em)
-  .resume
-    width 50em
-
-  .contact-info
-    grid-template-columns 1fr 1fr 1fr
-
+@media all and (min-width: big-break)
   @supports (display: grid)
     .resume
       display grid
-      max-width 50em
-      width auto
+      max-width big-break
 
     h1
       font-size font-size-huge
 
 // print
 @media print
-  html, body
-    height 100% // for vertical centering
-
   body
     margin 0
     font-size 12px
-    display flex // also for vertical centering
-    align-items center
 
   .resume
     max-width 100%
     display grid
 
-  h1, h2, .article
+  h1, h2
     margin-bottom 0
 
   h1
@@ -201,6 +170,9 @@ h3
   h2
     margin-top 1em
 
-  .contact-info
-    display grid
-    grid-template-columns 1fr 1fr 1fr
+  .certifications, .education
+    margin-top gutter
+
+  .break-before
+    page-break-before always
+

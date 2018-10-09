@@ -20,7 +20,9 @@
 
     <p class="summary">Software engineer with a long career across the full stack.</p>
 
-    <div class="contact-info">
+    <section class="contact-info">
+      <h2 class="header header--fancy">Contact</h2>
+
       <a class="contact-link" href="mailto:eric.sakmar@gmail.com">
         <img class="contact-icon" src="assets/mail.svg" aria-hidden="true" inline />eric.sakmar@gmail.com
       </a>
@@ -38,11 +40,9 @@
         <img class="contact-icon" src="assets/codepen.svg" aria-hidden="true" inline />ericsakmar
       </a>
 
-      <!-- my linked in isn't very interesting right now
       <a class="contact-link" href="https://www.linkedin.com/in/eric-sakmar/">
         <img class="contact-icon" src="assets/linkedin.svg" aria-hidden="true" inline />eric-sakmar
       </a>
-      -->
 
       <a class="contact-link" href="https://ericsakmar.com">
         <img class="contact-icon" src="assets/globe.svg" aria-hidden="true" inline />ericsakmar.com
@@ -51,99 +51,204 @@
       <span class="contact-link">
         <img class="contact-icon" src="assets/map-pin.svg" aria-hidden="true" inline />Pittsburgh, PA
       </span>
-    </div>
+    </section>
 
-    <h2 class="header header--sub header--fancy professional-experience__header">Professional Experience</h2>
+    <section class="professional-experience">
+      <h2 class="header header--fancy">Professional Experience</h2>
 
-    <article class="article professional-experience__front-end">
-      <h3 class="header header--sub header--light">
-        <span class="highlight">Front end development</span> of enterprise projects that:
-      </h3>
-      <ul class="highlights">
-        <li>allow analysts to set up data sources and connect them to processing sequences</li>
-        <li>feed data into a decision-making system and visualize the results</li>
-        <li>browse and analyze geospatial data</li>
-      </ul>
-      <p class="additional-info">
-      <span class="highlight">Using</span> ASP.NET, Angular, CSS, D3, HTML, jQuery, JSP, JavaScript, Preprocessors, React, Redux, Struts, TypeScript;
-        <span class="highlight">Automated testing</span> with Jasmine, Jest, Karma, Mocha, Protractor;
-        <span class="highlight">Build tools</span> with Grunt, Gulp, Webpack, Yeoman
-      </p>
-    </article>
+      <article class="professional-experience__level">
+        <h3 class="header">Senior Software Engineer</h3>
 
-    <article class="article professional-experience__mobile">
-      <h3 class="header header--sub header--light">
-        <span class="highlight">Mobile development</span> of apps that:
-      </h3>
-      <ul class="highlights">
-        <li>search for personnel skills and display them geographically</li>
-        <li>track sleep habits and offer advice on how that affects job performance</li>
-        <li>calculate safety requirements of electrical systems</li>
-      </ul>
-      <p class="additional-info">
-        <span class="highlight">Android</span> with Butterknife, Java, RxAndroid, Support Libraries;
-        <span class="highlight">iOS</span> with CoreData, Objective-C;
-        Mobile Web, Offline Support, Multi-Device Support
-      </p>
-    </article>
+        <div class="employment">
+          <p class="employment__text">Concurrent Technologies Corporation</p>
+          <p class="employment__text">Arlington, VA and Pittsburgh, PA</p>
+          <p class="employment__text em">June 2016 to present</p>
+        </div>
 
-    <article class="article professional-experience__back-end">
-      <h3 class="header header--sub header--light">
-        <span class="highlight">Back end development</span> of systems that:
-      </h3>
-      <ul class="highlights">
-        <li>provide secure REST services</li>
-        <li>perform federated searches across disparate data sources</li>
-        <li>interface with third party systems</li>
-      </ul>
-      <p class="additional-info">
-        <span class="highlight">Using</span> Java, Node.js, Ruby, Scala;
-        <span class="highlight">Dependency injection</span> with Guice, HK2;
-        <span class="highlight">Automated testing</span> with JUnit, Mocha, RSpec, ScalaTest;
-        <span class="highlight">Build tools</span> with Maven, Gradle, NPM
-      </p>
-    </article>
+        <div class="experience">
+          <p class="experience__summary">
+            <span class="highlight">Front End Development</span> in updating a 
+            legacy application to modern technologies and techniques. Worked
+            with junior devs through mentoring and code reviews.
+          </p>
+          <p class="experience__stack em">
+            CSS, D3, Gulp, HTML, Jasmine, JavaScript, Jest, Karma, LESS, Mocha, 
+            React, Redux, SVG, TypeScript, Webpack, Yeoman
+          </p>
+        </div>
 
-    <h2 class="header header--sub header--fancy employment-history__header">Employment History</h2>
+        <div class="experience">
+          <p class="experience__summary">
+            <span class="highlight">Full Stack Development</span> on an application
+            for browsing and analyzing geospatial data. 
+          </p>
+          <p class="experience__stack em">
+            Angular, CSS, D3, HTML, JavaScript, Karma, Mapbox, Mocha, 
+            Protractor, REST, Ruby on Rails, SASS, SVG, TypeScript, Webpack
+          </p>
+        </div>
 
-    <article class="article employment-history__employer">
-      <h3 class="header header--sub">Concurrent Technologies Corporation</h3>
-      <p class="text">
-        Johnstown,&nbsp;PA; Alexandria,&nbsp;VA; Arlington,&nbsp;VA; Pittsburgh,&nbsp;PA&nbsp;(remote)
-        <br/>
-        <span class="text additional-info">May 2006 to Present</span>
-      </p>
+        <div class="experience">
+          <p class="experience__summary">
+            <span class="highlight">Front End Development</span> on a prototype
+            application to access containerized software instances.
+          </p>
+          <p class="experience__stack em">
+            CSS, HTML, JavaScript, Pug, Responsive Design, Stylus, Vue
+          </p>
+        </div>
 
-      <h3 class="header header--sub">Promotions</h3>
-      <p class="text">Associate Software Engineer<br/><span class="additional-info">May 2008</span></p>
-      <p class="text">Staff Software Engineer<br/><span class="additional-info">May 2010</span></p>
-      <p class="text">Senior Software Engineer<br/><span class="additional-info">June 2016</span></p>
-    </article>
+        <div class="experience">
+          <p class="experience__summary">
+            <span class="highlight">Mobile Development</span> on a prototype app
+            to request and apply derived credentials.
+          </p>
+          <p class="experience__stack em">
+            Android, Butterknife, RxAndroid, Support Libraries
+          </p>
+        </div>
+      </article>
 
-    <h2 class="header header--sub header--fancy certifications__header">Certifications</h2>
+      <article class="professional-experience__level">
+        <h3 class="header">Staff Software Engineer</h3>
 
-    <article class="article certifications">
-      <h3 class="header header--sub">Mobile Web Specialist, Google Certified</h3>
-      <p class="text">
-        <img class="badge" src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/11358263"
-          alt="Mobile Web Specialist Badge"/>
-        &ldquo;The Mobile Web Developer Certification is a performance-based exam that
-        challenges mobile web developers to write code in response to real-world
-        tasks.&rdquo;
-      </p>
-      <p class="text additional-info">Issued on March 23, 2018. Expires on March 23, 2021.</p>
-      <a class="external-link"
-        href="https://www.credential.net/q2dyt5ic?key=e1c5f1dc43e0c81ca277d556d51f8dcf5f821f98959b40aa2d9e8a4a5bbb7cd3">View certificate</a>
-    </article>
+        <div class="employment">
+          <p class="employment__text">Concurrent Technologies Corporation</p>
+          <p class="employment__text">Arlington, VA and Alexandria, VA</p>
+          <p class="employment__text em">May 2010 to June 2016</p>
+        </div>
 
-    <h2 class="header header--sub header--fancy education__header">Education</h2>
+        <div class="experience">
+          <p class="experience__summary">
+            <span class="highlight">Full Stack Development</span> on an application
+            that allows analysts to feed data into a decision making system and 
+            visualize the results.
+          </p>
+          <p class="experience__stack em">
+            Angular, CSS, CoffeeScript, D3, HTML, Karma, Mocha, Postgres, 
+            Protractor, Ruby&nbsp;on&nbsp;Rails
+          </p>
+        </div>
 
-    <article class="article education">
-      <h3 class="header header--sub">University of Pittsburgh at Johnstown</h3>
-      <p class="text">Bachelor of Science, Computer Science</p>
-      <p class="text">Presidential Scholar, Magna Cum Laude</p>
-      <p class="text additional-info">August 2002 to May 2006</p>
-    </article>
+        <div class="experience">
+          <p class="experience__summary">
+            <span class="highlight">Mobile Development</span> on an app to search
+            for personnel skills and display them geographically.
+          </p>
+          <p class="experience__stack em">
+            Android, Core Data, Objective C, Offline Support, iOS
+          </p>
+        </div>
+
+        <div class="experience break-before">
+          <p class="experience__summary">
+            <span class="highlight">Mobile Web Development</span> on an app for
+            assessing safety requirements and precautions for electrical systems.
+          </p>
+          <p class="experience__stack em">
+            CSS, HTML, JavaScript, Responsive Design
+          </p>
+        </div>
+
+        <div class="experience">
+          <p class="experience__summary">
+            <span class="highlight">Mobile Development (Native and Web)</span>
+            on an app for making predictions about operational effectiveness 
+            based on sleep data.
+          </p>
+          <p class="experience__stack em">
+            Android, CSS, HTML, JQuery, JavaScript, SVG
+          </p>
+        </div>
+
+        <div class="experience">
+          <p class="experience__summary">
+            <span class="highlight">Back End Development</span> on a service 
+            providing federated searches across disparate data sources.
+          </p>
+          <p class="experience__stack em">
+            HK2, JUnit, Java, Jersey, Scala, ScalaTest
+          </p>
+        </div>
+
+        <div class="experience">
+          <p class="experience__summary">
+            <span class="highlight">Full Stack Development</span> on a system for
+            tracking inventory lifecycles.
+          </p>
+          <p class="experience__stack em">
+            CSS, Guice, HTML, JQuery, JSP, JUnit, Java, JavaScript, Struts
+          </p>
+        </div>
+      </article>
+
+      <article class="professional-experience__level">
+        <h3 class="header">Associate Software Engineer</h3>
+
+        <div class="employment">
+          <p class="employment__text">Concurrent Technologies Corporation</p>
+          <p class="employment__text">Alexandria, VA</p>
+          <p class="employment__text em">May 2008 to May 2010</p>
+        </div>
+
+        <div class="experience">
+          <p class="experience__summary">
+            <span class="highlight">Full Stack Development</span> on a system for 
+            discovering, sharing, and reusing learning content.
+          </p>
+          <p class="experience__stack em">
+            JSP, JUnit, Java, JavaFX, JavaServer Faces, Protocol Buffers, REST, Swing, XML, XSLT
+          </p>
+        </div>
+      </article>
+
+      <article class="professional-experience__level">
+        <h3 class="header">Assistant Software Engineer</h3>
+
+        <div class="employment">
+          <p class="employment__text">Concurrent Technologies Corporation</p>
+          <p class="employment__text">Johnstown, PA</p>
+          <p class="employment__text em">May 2006 to May 2008</p>
+        </div>
+
+        <div class="experience">
+          <p class="experience__summary">
+            <span class="highlight">Back End Development</span> on a system for
+            managing e-learning assets.
+          </p>
+          <p class="experience__stack em">
+            JUnit, Java, REST, Swing, XML, XSLT
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <section class="certifications">
+      <h2 class="header header--fancy">Certifications</h2>
+      <article>
+        <h3 class="header">Mobile Web Specialist, Google Certified</h3>
+        <p>
+          <img class="badge" src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/11358263"
+            alt="Mobile Web Specialist Badge"/>
+          &ldquo;The Mobile Web Developer Certification is a performance-based exam that
+          challenges mobile web developers to write code in response to real-world
+          tasks.&rdquo;
+        </p>
+        <p class="em">Issued on March 23, 2018. Expires on March 23, 2021.</p>
+        <a class="external-link"
+          href="https://www.credential.net/q2dyt5ic?key=e1c5f1dc43e0c81ca277d556d51f8dcf5f821f98959b40aa2d9e8a4a5bbb7cd3">View certificate</a>
+      </article>
+    </section>
+
+    <section class="education">
+      <h2 class="header header--fancy">Education</h2>
+      <article>
+        <h3 class="header">University of Pittsburgh at Johnstown</h3>
+        <p>Bachelor of Science, Computer Science</p>
+        <p>Presidential Scholar, Magna Cum Laude</p>
+        <p class="em">August 2002 to May 2006</p>
+      </article>
+    </section>
   </main>
 </body>
 </html>
