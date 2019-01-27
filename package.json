@@ -4,11 +4,11 @@
   "description": "Professional Resume for Eric Sakmar",
   "main": "dist/index.html",
   "dependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^4.0.0"
   },
   "devDependencies": {
-    "gulp-inject": "^4.3.2",
-    "gulp-inline-source": "^3.1.0",
+    "gulp-inject": "^5.0.2",
+    "gulp-inline-source": "^4.0.0",
     "gulp-stylus": "^2.7.0",
     "gulp-webserver": "^0.9.1"
   },
