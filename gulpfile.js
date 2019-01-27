@@ -43,3 +43,4 @@ function doWatch() {
 }
 
 exports.default = series(html, style, assets, doInline, serve, doWatch);
+exports.deploy = series(html, style, assets, doInline);
