@@ -1,8 +1,9 @@
 accent-color = #0074d9
-accent-color-light = #ffdc00
+// accent-color-light = #D6ECFF
+accent-color-light = #DAE1E7
 text-color = #111
 background-color = #fff
-highlight-color = #85144b
+highlight-color = darken(accent-color, 30%)
 
 gutter = 1em
 gutter-big = 3em
@@ -85,9 +86,11 @@ h3
   margin-bottom 0.25em
 
 .contact-icon
-  height 1em
   position relative
-  top 0.15em
+  width 1em
+  top 0.2em
+  margin-right 0.25em
+  color #586F84
 
 .employment__text
   margin-top 0
@@ -160,19 +163,23 @@ h3
     max-width 100%
     display grid
 
-  h1, h2
-    margin-bottom 0
-
   h1
     font-size font-size-huge
     margin-top 0
+    margin-bottom 0
 
   h2
     margin-top 1em
+    margin-bottom 0.5em
 
   .certifications, .education
-    margin-top gutter
+    margin-top 0
 
   .break-before
     page-break-before always
 
+  .external-link
+    display none
+
+  .ctc-senior, .ctc-associate
+    border-bottom 0 !important

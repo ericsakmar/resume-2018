@@ -1,41 +1,46 @@
-const gulp = require('gulp');
+const {dest, series, src, watch} = require('gulp');
 const inject = require('gulp-inject');
 const inline = require('gulp-inline-source');
 const stylus = require('gulp-stylus');
 const webserver = require('gulp-webserver');
 
-gulp.task('default', ['watch']);
+function copy() {
+  return series(html, style, assets);
+}
 
-gulp.task('copy', ['html', 'style', 'assets']);
+function html() {
+  return src('./src/*.html').pipe(dest('./dist'));
+}
 
-gulp.task('html', () => gulp.src('./src/*.html').pipe(gulp.dest('./dist')));
-
-gulp.task('style', () =>
-  gulp
-    .src('./src/style.styl')
+function style() {
+  return src('./src/style.styl')
     .pipe(stylus())
-    .pipe(gulp.dest('./dist')),
-);
+    .pipe(dest('./dist'));
+}
 
-gulp.task('assets', () =>
-  gulp.src('./assets/*').pipe(gulp.dest('./dist/assets')),
-);
+function assets() {
+  return src('./assets/*').pipe(dest('./dist/assets'));
+}
 
-gulp.task('inline', ['copy'], () =>
-  gulp
-    .src('./dist/index.html')
+function doInline() {
+  return src('./dist/index.html')
     .pipe(inline())
-    .pipe(gulp.dest('./dist')),
-);
+    .pipe(dest('./dist'));
+}
 
-gulp.task('serve', ['inline'], () =>
-  gulp.src('./dist').pipe(
+function serve() {
+  return src('./dist').pipe(
     webserver({
       host: '0.0.0.0',
       port: 3000,
       livereload: true,
     }),
-  ),
-);
+  );
+}
 
-gulp.task('watch', ['serve'], () => gulp.watch('./src/*', ['inline']));
+function doWatch() {
+  return watch('./src/*', series(html, style, assets, doInline));
+}
+
+exports.default = series(html, style, assets, doInline, serve, doWatch);
+exports.deploy = series(html, style, assets, doInline);
